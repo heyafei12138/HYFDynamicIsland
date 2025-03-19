@@ -6,8 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD80E5C32D8AA49E005C73D0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD80E5C22D8AA49E005C73D0 /* WidgetKit.framework */; };
+		BD80E5C52D8AA49E005C73D0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD80E5C42D8AA49E005C73D0 /* SwiftUI.framework */; };
+		BD80E5D22D8AA4A0005C73D0 /* DynamicIsActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BD80E5C02D8AA49E005C73D0 /* DynamicIsActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD80E5D02D8AA4A0005C73D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD80E58C2D8AA3DB005C73D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD80E5BF2D8AA49E005C73D0;
+			remoteInfo = DynamicIsActivityExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BD80E5D32D8AA4A0005C73D0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BD80E5D22D8AA4A0005C73D0 /* DynamicIsActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BD80E5942D8AA3DB005C73D0 /* HYFDynamicIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYFDynamicIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD80E5C02D8AA49E005C73D0 /* DynamicIsActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicIsActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD80E5C22D8AA49E005C73D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BD80E5C42D8AA49E005C73D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +50,27 @@
 				Info.plist,
 			);
 			target = BD80E5932D8AA3DB005C73D0 /* HYFDynamicIsland */;
+		};
+		BD80E5D72D8AA4A0005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */;
+		};
+		BD80E5F62D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DynamicIsActivityAttributes.swift,
+			);
+			target = BD80E5932D8AA3DB005C73D0 /* HYFDynamicIsland */;
+		};
+		BD80E5F72D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DynamicIsActivityAttributes.swift,
+			);
+			target = BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,6 +83,23 @@
 			path = HYFDynamicIsland;
 			sourceTree = "<group>";
 		};
+		BD80E5C62D8AA49E005C73D0 /* DynamicIsActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BD80E5D72D8AA4A0005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */,
+			);
+			path = DynamicIsActivity;
+			sourceTree = "<group>";
+		};
+		BD80E5DF2D8AA4BE005C73D0 /* DynamicIsActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BD80E5F62D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */,
+				BD80E5F72D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */,
+			);
+			path = DynamicIsActivity;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +110,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD80E5BD2D8AA49E005C73D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD80E5C52D8AA49E005C73D0 /* SwiftUI.framework in Frameworks */,
+				BD80E5C32D8AA49E005C73D0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				BD80E5962D8AA3DB005C73D0 /* HYFDynamicIsland */,
+				BD80E5C62D8AA49E005C73D0 /* DynamicIsActivity */,
+				BD80E5DF2D8AA4BE005C73D0 /* DynamicIsActivity */,
+				BD80E5C12D8AA49E005C73D0 /* Frameworks */,
 				BD80E5952D8AA3DB005C73D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +137,18 @@
 			isa = PBXGroup;
 			children = (
 				BD80E5942D8AA3DB005C73D0 /* HYFDynamicIsland.app */,
+				BD80E5C02D8AA49E005C73D0 /* DynamicIsActivityExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD80E5C12D8AA49E005C73D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD80E5C22D8AA49E005C73D0 /* WidgetKit.framework */,
+				BD80E5C42D8AA49E005C73D0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +161,12 @@
 				BD80E5902D8AA3DB005C73D0 /* Sources */,
 				BD80E5912D8AA3DB005C73D0 /* Frameworks */,
 				BD80E5922D8AA3DB005C73D0 /* Resources */,
+				BD80E5D32D8AA4A0005C73D0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BD80E5D12D8AA4A0005C73D0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BD80E5962D8AA3DB005C73D0 /* HYFDynamicIsland */,
@@ -82,6 +177,28 @@
 			productName = HYFDynamicIsland;
 			productReference = BD80E5942D8AA3DB005C73D0 /* HYFDynamicIsland.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD80E5D62D8AA4A0005C73D0 /* Build configuration list for PBXNativeTarget "DynamicIsActivityExtension" */;
+			buildPhases = (
+				BD80E5BC2D8AA49E005C73D0 /* Sources */,
+				BD80E5BD2D8AA49E005C73D0 /* Frameworks */,
+				BD80E5BE2D8AA49E005C73D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BD80E5C62D8AA49E005C73D0 /* DynamicIsActivity */,
+			);
+			name = DynamicIsActivityExtension;
+			packageProductDependencies = (
+			);
+			productName = DynamicIsActivityExtension;
+			productReference = BD80E5C02D8AA49E005C73D0 /* DynamicIsActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +211,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					BD80E5932D8AA3DB005C73D0 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					BD80E5BF2D8AA49E005C73D0 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -113,12 +233,20 @@
 			projectRoot = "";
 			targets = (
 				BD80E5932D8AA3DB005C73D0 /* HYFDynamicIsland */,
+				BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD80E5922D8AA3DB005C73D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD80E5BE2D8AA49E005C73D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +263,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD80E5BC2D8AA49E005C73D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD80E5D12D8AA4A0005C73D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */;
+			targetProxy = BD80E5D02D8AA4A0005C73D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BD80E5A82D8AA3DD005C73D0 /* Debug */ = {
@@ -148,11 +291,13 @@
 				DEVELOPMENT_TEAM = 3R4AW678R7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HYFDynamicIsland/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -176,11 +321,13 @@
 				DEVELOPMENT_TEAM = 3R4AW678R7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HYFDynamicIsland/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -246,6 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -303,6 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -310,6 +459,62 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD80E5D42D8AA4A0005C73D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R4AW678R7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicIsActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DynamicIsActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYFDynamicIslandcom.HYFDynamicIsland.DynamicIsActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD80E5D52D8AA4A0005C73D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3R4AW678R7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicIsActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DynamicIsActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYFDynamicIslandcom.HYFDynamicIsland.DynamicIsActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -330,6 +535,15 @@
 			buildConfigurations = (
 				BD80E5A82D8AA3DD005C73D0 /* Debug */,
 				BD80E5A92D8AA3DD005C73D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD80E5D62D8AA4A0005C73D0 /* Build configuration list for PBXNativeTarget "DynamicIsActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD80E5D42D8AA4A0005C73D0 /* Debug */,
+				BD80E5D52D8AA4A0005C73D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
