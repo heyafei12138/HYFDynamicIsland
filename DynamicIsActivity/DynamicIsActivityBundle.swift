@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct DynamicIsActivityBundle: WidgetBundle {
     var body: some Widget {
-//        DynamicIsActivity()
+        DynamicIsActivity()
         DynamicIsActivityLiveActivity()
     }
 }

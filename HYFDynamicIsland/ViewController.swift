@@ -7,11 +7,12 @@
 
 import UIKit
 import ActivityKit
+import WidgetKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        createButton(title: "启动灵动岛", y: view.center.y - 100, selector: #selector(startDeliveryPizza))
+        createButton(title: "更新数据", y: view.center.y - 100, selector: #selector(startDeliveryPizza))
 //        createButton(title: "更新灵动岛", y: view.center.y - 50, selector: #selector(updateDeliveryPizza))
 //        createButton(title: "关闭灵动岛", y: view.center.y, selector: #selector(endAppearanceTransition))
     }
@@ -26,6 +27,17 @@ class ViewController: UIViewController {
         button.addTarget(self, action: selector, for: .touchUpInside)
     }
     @objc private func startDeliveryPizza() {
+      
+        
+        let sharedDefaults = UserDefaults(suiteName: "group.DynamicIslandDemo")
+           sharedDefaults?.setValue("Hello, Widget!", forKey: "widgetText")
+           sharedDefaults?.setValue("customImage", forKey: "widgetImage")
+           sharedDefaults?.synchronize()
+
+           // 让小组件重新加载
+           WidgetCenter.shared.reloadAllTimelines()
+        return
+        
         //初始化静态数据
         let pizzaDeliveryAttributes = DynamicIsActivityAttributes(numberOfPizzas: 5, totalAmount:"￥99", orderNumber: "23456")
         //初始化动态数据

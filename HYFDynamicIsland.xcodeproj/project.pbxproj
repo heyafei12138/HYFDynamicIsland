@@ -41,6 +41,7 @@
 		BD80E5C02D8AA49E005C73D0 /* DynamicIsActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicIsActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80E5C22D8AA49E005C73D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BD80E5C42D8AA49E005C73D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BD80E6602D8BCAAE005C73D0 /* DynamicIsActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DynamicIsActivityExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -58,19 +59,12 @@
 			);
 			target = BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */;
 		};
-		BD80E5F62D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */ = {
+		BD80E6622D8BCC08005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				DynamicIsActivityAttributes.swift,
 			);
 			target = BD80E5932D8AA3DB005C73D0 /* HYFDynamicIsland */;
-		};
-		BD80E5F72D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DynamicIsActivityAttributes.swift,
-			);
-			target = BD80E5BF2D8AA49E005C73D0 /* DynamicIsActivityExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -86,18 +80,15 @@
 		BD80E5C62D8AA49E005C73D0 /* DynamicIsActivity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				BD80E6622D8BCC08005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */,
 				BD80E5D72D8AA4A0005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */,
 			);
 			path = DynamicIsActivity;
 			sourceTree = "<group>";
 		};
-		BD80E5DF2D8AA4BE005C73D0 /* DynamicIsActivity */ = {
+		BD80E6472D8AC95C005C73D0 /* normalWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				BD80E5F62D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "HYFDynamicIsland" target */,
-				BD80E5F72D8AA61D005C73D0 /* Exceptions for "DynamicIsActivity" folder in "DynamicIsActivityExtension" target */,
-			);
-			path = DynamicIsActivity;
+			path = normalWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -125,9 +116,10 @@
 		BD80E58B2D8AA3DB005C73D0 = {
 			isa = PBXGroup;
 			children = (
+				BD80E6602D8BCAAE005C73D0 /* DynamicIsActivityExtension.entitlements */,
 				BD80E5962D8AA3DB005C73D0 /* HYFDynamicIsland */,
 				BD80E5C62D8AA49E005C73D0 /* DynamicIsActivity */,
-				BD80E5DF2D8AA4BE005C73D0 /* DynamicIsActivity */,
+				BD80E6472D8AC95C005C73D0 /* normalWidget */,
 				BD80E5C12D8AA49E005C73D0 /* Frameworks */,
 				BD80E5952D8AA3DB005C73D0 /* Products */,
 			);
@@ -286,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HYFDynamicIsland/HYFDynamicIsland.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3R4AW678R7;
@@ -305,6 +298,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HYFDynamicIslandcom.HYFDynamicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HYFDynamicIsland/HYFDynamicIsland.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3R4AW678R7;
@@ -335,6 +333,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HYFDynamicIslandcom.HYFDynamicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DynamicIsActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3R4AW678R7;
@@ -495,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DynamicIsActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3R4AW678R7;
